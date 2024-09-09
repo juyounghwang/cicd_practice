@@ -59,7 +59,7 @@ jobs:
         run: |
           cd ${{ env.PROJECT_DIR }}
           poetry run pytest --cov=./ --cov-report=xml
-        continue-on-error: true
+        continue-on-error: true   # 실패 시에도 진행이 되게끔 하는 설정
 
       # - name: Upload coverage to Codecov
       #   uses: codecov/codecov-action@v3
